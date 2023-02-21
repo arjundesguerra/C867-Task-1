@@ -5,8 +5,13 @@
 //  Created by Arjun Esguerra on 2/20/23.
 //
 
-#ifndef degree_h
-#define degree_h
+#ifndef DEGREE_H
+#define DEGREE_H
 
-
-#endif /* degree_h */
+enum class DegreeProgram {
+    SECURITY,
+    NETWORK,
+    SOFTWARE,
+    NONE
+};
+#endif/* degree_h */
