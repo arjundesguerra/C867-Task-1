@@ -1,13 +1,25 @@
-//
-//  roster.hpp
-//  C867-Task-1
-//
-//  Created by Arjun Esguerra on 2/20/23.
-//
-
 #ifndef roster_hpp
 #define roster_hpp
 
-#include <stdio.h>
+#include <string>
+#include "student.hpp"
+
+class Roster {
+    // constructor and destructor
+    Roster();
+    ~Roster();
+    
+private:
+    Student* classRosterArray[5] = {nullptr, nullptr, nullptr, nullptr, nullptr};
+    
+public:
+    void add(std::string studentID, std::string firstName, std::string lastName, std::string emailAddress, int age, int daysInCourse1, int daysInCourse2, int daysInCourse3, DegreeProgram degreeProgram);
+    void remove(std::string studentID);
+    void printAll();
+    void printAverageDaysInCourse(std::string studentID);
+    void printInvalidEmails();
+    void printByDegreeProgram(DegreeProgram degreeProgram);
+
+    };
 
 #endif /* roster_hpp */
