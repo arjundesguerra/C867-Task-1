@@ -26,7 +26,7 @@ public:
     void setDegreeProgram(DegreeProgram degreeProgram);
     
     // other methods
-    void print() const;
+    void print();
     
 private:
     std::string studentID;

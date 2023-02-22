@@ -4,6 +4,7 @@
 enum class DegreeProgram {
     SECURITY,
     NETWORK,
-    SOFTWARE
+    SOFTWARE,
+    NONE
 };
 #endif/* degree_h */

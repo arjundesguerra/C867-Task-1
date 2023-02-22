@@ -1,6 +1,5 @@
 #include <iostream>
 #include "student.hpp"
-
 // constructor
 Student::Student(std::string studentID, std::string firstName, std::string lastName, std::string emailAddress, int age, std::array<int, 3> daysToComplete, DegreeProgram degreeProgram)
 {
@@ -32,7 +31,7 @@ void Student::setDaysToComplete(std::array<int, 3> daysToComplete) { this->daysT
 void Student::setDegreeProgram(DegreeProgram degreeProgram) { this->degreeProgram = degreeProgram; }
 
 // print
-void Student::print() const {
+void Student::print() {
     std::cout << "Student ID: " << studentID << std::endl;
     std::cout << "First Name: " << firstName << std::endl;
     std::cout << "Last Name: " << lastName << std::endl;
@@ -50,6 +49,8 @@ void Student::print() const {
         case DegreeProgram::SOFTWARE:
             std::cout << "Software";
             break;
+
     }
     std::cout << std::endl;
+
 }

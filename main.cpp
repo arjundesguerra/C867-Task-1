@@ -17,48 +17,52 @@ int main() {
         "A5,Arjun,Esguerra,aesgue5@wgu.edu,20,19,24,14,SOFTWARE"};
     
     Roster classRoster;
-    
-    for (const std::string& data : studentData) {
-        std::istringstream iss(data);
-        std::vector<std::string> tokens;
-        std::string token;
-        
-        while (std::getline(iss, token, ',')) {
-            tokens.push_back(token);
-        }
-        
-        DegreeProgram degreeProgram;
-        
-        if (tokens[8] == "SECURITY") {
-            degreeProgram = DegreeProgram::SECURITY;
-        } else if (tokens[8] == "NETWORK") {
-            degreeProgram = DegreeProgram::NETWORK;
-        } else if (tokens[8] == "SOFTWARE") {
-            degreeProgram = DegreeProgram::SOFTWARE;
-        }
-        
-        classRoster.add(tokens[0], tokens[1], tokens[2], tokens[3], std::stoi(tokens[4]), std::stoi(tokens[5]), std::stoi(tokens[6]), std::stoi(tokens[7]), degreeProgram);
-    }
-    
-    std::cout << "Printing all student data:\n";
-      classRoster.printAll();
-    
-    std::cout << "Printing invalid email addresses:\n";
-        classRoster.printInvalidEmails();
-    
-    for (int i = 0; i < 5; i++) {
-        std::string studentId = classRoster.classRosterArray[i]->getStudentID();
-        classRoster.printAverageDaysInCourse(studentId);
-    }
-    
-    std::cout << "Printing student data for software degree program:\n";
-    classRoster.printByDegreeProgram(DegreeProgram::SOFTWARE);
-    
-    std::cout << "Removing student with ID A3:\n";
-    classRoster.remove("A3");
-    
-    std::cout << "Printing all student data after removing student:\n";
-    classRoster.printAll();
-    
-    
-};
+     
+     for (const std::string& data : studentData) {
+     std::istringstream iss(data);
+     std::vector<std::string> tokens;
+     std::string token;
+     
+     while (std::getline(iss, token, ',')) {
+     tokens.push_back(token);
+     }
+     
+     DegreeProgram degreeProgram;
+     
+     if (tokens[8] == "SECURITY") {
+     degreeProgram = DegreeProgram::SECURITY;
+     } else if (tokens[8] == "NETWORK") {
+     degreeProgram = DegreeProgram::NETWORK;
+     } else if (tokens[8] == "SOFTWARE") {
+     degreeProgram = DegreeProgram::SOFTWARE;
+     } else {
+         degreeProgram = DegreeProgram::NONE;
+     }
+     
+     classRoster.add(tokens[0], tokens[1], tokens[2], tokens[3], std::stoi(tokens[4]), std::stoi(tokens[5]), std::stoi(tokens[6]), std::stoi(tokens[7]), degreeProgram);
+     }
+     
+     std::cout << "Printing all student data:\n";
+     classRoster.printAll();
+      
+     
+     std::cout << "Printing invalid email addresses:\n";
+     classRoster.printInvalidEmails();
+     
+     for (int i = 0; i < 5; i++) {
+     std::string studentId = classRoster.classRosterArray[i]->getStudentID();
+     classRoster.printAverageDaysInCourse(studentId);
+     }
+     
+     std::cout << "Printing student data for software degree program:\n";
+     classRoster.printByDegreeProgram(DegreeProgram::SOFTWARE);
+     
+     std::cout << "Removing student with ID A3\n";
+     classRoster.remove("A3");
+     
+     std::cout << "Printing all student data after removing student:\n";
+     classRoster.printAll();
+     
+     
+     };
+     
