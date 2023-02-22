@@ -1,9 +1,6 @@
 #include <string>
 #include <array>
-
-enum class DegreeProgram {
-    SECURITY, NETWORKING, SOFTWARE
-};
+#include "degree.h"
 
 class Student {
 public:

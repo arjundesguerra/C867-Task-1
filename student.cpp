@@ -44,7 +44,7 @@ void Student::print() const {
         case DegreeProgram::SECURITY:
             std::cout << "Security";
             break;
-        case DegreeProgram::NETWORKING:
+        case DegreeProgram::NETWORK:
             std::cout << "Networking";
             break;
         case DegreeProgram::SOFTWARE:
