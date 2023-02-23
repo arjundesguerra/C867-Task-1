@@ -47,8 +47,6 @@ void Roster::printAll() {
     for (int i = 0; i < 5; i++) {
         if (classRosterArray[i] != nullptr) {
             classRosterArray[i]->print();
-        } else {
-            std::cout << "Error: Student with ID A" << (i + 1) << " not found." << std::endl;
         }
     }
 }

@@ -42,11 +42,11 @@ int main() {
      classRoster.add(tokens[0], tokens[1], tokens[2], tokens[3], std::stoi(tokens[4]), std::stoi(tokens[5]), std::stoi(tokens[6]), std::stoi(tokens[7]), degreeProgram);
      }
      
-     std::cout << "Printing all student data:\n";
+    std::cout << std::endl << "Printing all student data:\n";
      classRoster.printAll();
       
      
-     std::cout << "Printing invalid email addresses:\n";
+     std::cout << std::endl << "Printing invalid email addresses:\n";
      classRoster.printInvalidEmails();
      
      for (int i = 0; i < 5; i++) {
@@ -54,15 +54,17 @@ int main() {
      classRoster.printAverageDaysInCourse(studentId);
      }
      
-     std::cout << "Printing student data for software degree program:\n";
+     std::cout << std::endl << "Printing student data for software degree program:\n";
      classRoster.printByDegreeProgram(DegreeProgram::SOFTWARE);
      
-     std::cout << "Removing student with ID A3\n";
+     std::cout << std::endl << "Removing student with ID A3\n";
      classRoster.remove("A3");
      
-     std::cout << "Printing all student data after removing student:\n";
+     std::cout << std::endl << "Printing all student data after removing student:\n";
      classRoster.printAll();
      
+    std::cout << std::endl << "Removing student with ID A3\n";
+    classRoster.remove("A3");
      
      };
      

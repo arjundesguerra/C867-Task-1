@@ -32,22 +32,21 @@ void Student::setDegreeProgram(DegreeProgram degreeProgram) { this->degreeProgra
 
 // print
 void Student::print() {
-    std::cout << "Student ID: " << studentID << std::endl;
-    std::cout << "First Name: " << firstName << std::endl;
-    std::cout << "Last Name: " << lastName << std::endl;
-    std::cout << "Email Address: " << emailAddress << std::endl;
-    std::cout << "Age: " << age << std::endl;
-    std::cout << "Days to complete each course: {" << daysToComplete[0] << ", " << daysToComplete[1] << ", " << daysToComplete[2] << "}" << std::endl;
-    std::cout << "Degree Program: ";
+    std::cout << studentID << "\t"
+    << "First Name: " << firstName << "\t"
+    << "Last Name: " << lastName << "\t"
+    << "Age: " << age << "\t"
+    << "daysInCourse: {" << daysToComplete[0] << ", " << daysToComplete[1] << ", " << daysToComplete[2] << "}" <<
+    "\t" << "Degree Program: ";
     switch (degreeProgram) {
         case DegreeProgram::SECURITY:
-            std::cout << "Security";
+            std::cout << "Security" << "\t";
             break;
         case DegreeProgram::NETWORK:
-            std::cout << "Networking";
+            std::cout << "Networking" << "\t";
             break;
         case DegreeProgram::SOFTWARE:
-            std::cout << "Software";
+            std::cout << "Software" << "\t";
             break;
 
     }
